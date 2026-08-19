@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bruno Hoffmann — UX, IA e conversão</title>
+<meta name="description" content="Bruno Hoffmann, designer de produtos digitais. Transformo tráfego pago em clientes com UX, IA e otimização de conversão.">
+<meta property="og:title" content="Bruno Hoffmann — UX, IA e conversão">
+<meta property="og:description" content="Você já paga pelo clique. Eu faço ele virar cliente.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Instrument+Sans:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+  body { margin: 0; background: #050506; color: #f2f3f5; font-family: 'Instrument Sans', Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+  * { box-sizing: border-box; }
+  a { color: #f2f3f5; text-decoration: none; }
+  a:hover { color: #ffffff; }
+  h1, h2, h3 { font-family: 'Space Grotesk', Helvetica, sans-serif; font-weight: 500; letter-spacing: -0.03em; margin: 0; text-wrap: balance; }
+  p { margin: 0; text-wrap: pretty; }
+  input, select, textarea, button { font: inherit; color: inherit; }
+  :focus-visible { outline: 2px solid #ffffff; outline-offset: 3px; }
+  ::selection { background: #f2f3f5; color: #050506; }
+  @keyframes pulseGlow { 0%, 100% { opacity: 0.45; } 50% { opacity: 0.85; } }
+  @keyframes spinSlow { to { transform: rotate(360deg); } }
+  @keyframes floatY { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+  @media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; } }
+</style>
+</helmet>
+
+<div style="background: #050506; min-height: 100vh; overflow-x: hidden">
+  <header style="position: sticky; top: 0; z-index: 50; backdrop-filter: blur(16px); background: rgba(5,5,6,0.7); border-bottom: 1px solid rgba(255,255,255,0.05)">
+    <nav style="max-width: 1240px; margin: 0 auto; padding: 14px 24px; display: flex; align-items: center; gap: 32px">
+      <a href="#top" style="display: flex; align-items: center; gap: 9px; font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 18px; letter-spacing: -0.03em">
+        <img src="assets/hofflab-mark.png" alt="HoffLab" width="28" height="28" decoding="async" style="width: 28px; height: 28px; object-fit: contain; display: block">
+        <span>Hoff<span style="color: #8b9096">Lab</span></span>
+      </a>
+      <div data-nav-links style="margin-left: auto; display: none; gap: 30px; font-size: 14px; color: #8b9096">
+        <a href="#sobre" style="color: #8b9096" style-hover="color:#fff">Quem sou</a>
+        <a href="#processo" style="color: #8b9096" style-hover="color:#fff">Processo</a>
+        <a href="#projetos" style="color: #8b9096" style-hover="color:#fff">Projetos</a>
+        <a href="#faq" style="color: #8b9096" style-hover="color:#fff">FAQ</a>
+      </div>
+      <a data-cta-nav href="#diagnostico" style="margin-left: auto; padding: 10px 18px; border-radius: 999px; background: #f2f3f5; color: #050506; font-size: 14px; font-weight: 500; transition: transform 0.2s ease, box-shadow 0.2s ease" style-hover="transform:translateY(-1px); box-shadow:0 8px 26px rgba(255,255,255,0.16); color:#050506">Solicitar diagnóstico</a>
+    </nav>
+  </header>
+
+  <main id="top">
+
+    <section style="position: relative; padding: clamp(96px, 14vh, 160px) 24px clamp(80px, 12vh, 130px); overflow: hidden">
+      <div aria-hidden="true" style="position: absolute; inset: 0; pointer-events: none">
+        <div style="position: absolute; inset: -20% -20% 20%; background-image: radial-gradient(50% 45% at 50% 22%, rgba(255,255,255,0.09), transparent 70%), radial-gradient(38% 40% at 18% 12%, rgba(180,200,255,0.07), transparent 72%), radial-gradient(36% 38% at 84% 18%, rgba(200,180,255,0.06), transparent 72%); filter: blur(18px); animation: pulseGlow 12s ease-in-out infinite"></div>
+        <div style="position: absolute; left: 50%; top: 46%; width: 900px; height: 900px; margin: -450px 0 0 -450px; border: 1px solid rgba(255,255,255,0.05); border-radius: 50%; animation: spinSlow 90s linear infinite"></div>
+        <div style="position: absolute; left: 50%; top: 46%; width: 620px; height: 620px; margin: -310px 0 0 -310px; border: 1px dashed rgba(255,255,255,0.055); border-radius: 50%; animation: spinSlow 70s linear infinite reverse"></div>
+        <div style="position: absolute; inset: 0; background-image: radial-gradient(circle at 12% 22%, rgba(255,255,255,0.5) 1px, transparent 1.4px), radial-gradient(circle at 28% 68%, rgba(255,255,255,0.35) 1px, transparent 1.4px), radial-gradient(circle at 46% 14%, rgba(255,255,255,0.3) 1px, transparent 1.4px), radial-gradient(circle at 63% 78%, rgba(255,255,255,0.4) 1px, transparent 1.4px), radial-gradient(circle at 78% 34%, rgba(255,255,255,0.3) 1px, transparent 1.4px), radial-gradient(circle at 90% 62%, rgba(255,255,255,0.45) 1px, transparent 1.4px); animation: pulseGlow 8s 1s ease-in-out infinite"></div>
+        <div style="position: absolute; inset: 0; background: radial-gradient(80% 65% at 50% 40%, transparent 45%, rgba(5,5,6,0.9) 100%)"></div>
+      </div>
+
+      <div style="position: relative; max-width: 1080px; margin: 0 auto; text-align: center">
+        <div data-reveal style="display: inline-flex; align-items: center; gap: 9px; padding: 7px 15px; border: 1px solid rgba(255,255,255,0.12); border-radius: 999px; background: rgba(255,255,255,0.04); font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase; color: #b9bec4; margin-bottom: 30px">
+          <span style="width: 5px; height: 5px; border-radius: 50%; background: #f2f3f5"></span>
+          Produtos digitais e conversão
+        </div>
+        <h1 data-reveal style="font-size: clamp(40px, 7.4vw, 92px); line-height: 0.98; margin: 0 auto 26px; max-width: 980px">Você já paga pelo clique. <span style="color: #6c7278">E deixa dinheiro na mesa quando ele não vira cliente.</span></h1>
+        <p data-reveal style="font-size: clamp(16px, 1.9vw, 20px); line-height: 1.55; color: #9aa0a6; max-width: 620px; margin: 0 auto 40px">Cada visita que sai sem comprar é verba queimada. Uno UX, IA e estratégia para transformar o tráfego que você já paga em reuniões e vendas.</p>
+        <div data-reveal style="display: flex; flex-wrap: wrap; gap: 12px; justify-content: center">
+          <a href="#diagnostico" style="display: inline-flex; align-items: center; gap: 10px; padding: 15px 26px; border-radius: 999px; background: #f2f3f5; color: #050506; font-weight: 500; font-size: 15px; transition: transform 0.2s ease, box-shadow 0.2s ease" style-hover="transform:translateY(-2px); box-shadow:0 14px 34px rgba(255,255,255,0.18); color:#050506">Solicitar diagnóstico <span aria-hidden="true">→</span></a>
+          <a href="#projetos" style="display: inline-flex; align-items: center; gap: 10px; padding: 15px 26px; border-radius: 999px; border: 1px solid rgba(255,255,255,0.16); background: rgba(255,255,255,0.03); color: #f2f3f5; font-weight: 500; font-size: 15px; transition: background 0.2s ease, border-color 0.2s ease" style-hover="background:rgba(255,255,255,0.07); border-color:rgba(255,255,255,0.3); color:#f2f3f5">Ver projetos <span aria-hidden="true">↓</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section id="sobre" style="position: relative; max-width: 1240px; margin: 0 auto; padding: 80px 24px; border-top: 1px solid rgba(255,255,255,0.05)">
+      <div style="text-align: center; margin-bottom: 56px">
+        <div data-reveal style="display: inline-flex; align-items: center; gap: 9px; padding: 7px 15px; border: 1px solid rgba(255,255,255,0.12); border-radius: 999px; background: rgba(255,255,255,0.04); font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase; color: #b9bec4; margin-bottom: 22px">
+          <span style="width: 5px; height: 5px; border-radius: 50%; background: #f2f3f5"></span>
+          Quem faz
+        </div>
+        <h2 data-reveal style="font-size: clamp(28px, 4.4vw, 52px); line-height: 1.05">Bruno Hoffmann. <span style="color: #6c7278">IA, produto e negócio operando juntos.</span></h2>
+      </div>
+      <div data-about style="display: grid; gap: 40px; grid-template-columns: 1fr; align-items: center; max-width: 1000px; margin: 0 auto">
+        <div data-reveal style="position: relative; padding: 14px; border: 1px dashed rgba(255,255,255,0.14); border-radius: 26px; animation: floatY 9s ease-in-out infinite">
+          <img src="assets/bruno.png" alt="Bruno Hoffmann" loading="lazy" decoding="async" style="width: 100%; aspect-ratio: 4/5; object-fit: cover; border-radius: 18px; display: block; filter: saturate(0.9)">
+        </div>
+        <div data-reveal>
+          <p style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: #6c7278; margin-bottom: 18px">IA · Negócio · Expansão · Tecnologia · Produto</p>
+          <p style="font-size: 17px; line-height: 1.65; color: #b9bec4; margin-bottom: 18px">26 anos, mais de 8 anos construindo produtos digitais. Passei por área logada de montadora, SaaS de analytics e operações de aquisição, sempre no ponto onde tecnologia encontra receita: o que faz o cliente decidir e o que faz a operação escalar sem dobrar equipe.</p>
+          <p style="font-size: 17px; line-height: 1.65; color: #b9bec4; margin-bottom: 28px">Hoje trabalho com IA dentro do processo, não como enfeite: pesquisa, teste de mensagem, triagem de lead e automação do que era manual. Desenho, escrevo e desenvolvo o produto inteiro, e continuo lendo os números depois que ele entra no ar.</p>
+          <div style="display: flex; flex-wrap: wrap; gap: 10px">
+            <span style="padding: 9px 16px; border: 1px solid rgba(255,255,255,0.12); border-radius: 999px; background: rgba(255,255,255,0.03); font-size: 13px; color: #d6d9dc">IA aplicada ao produto</span>
+            <span style="padding: 9px 16px; border: 1px solid rgba(255,255,255,0.12); border-radius: 999px; background: rgba(255,255,255,0.03); font-size: 13px; color: #d6d9dc">Visão de negócio</span>
+            <span style="padding: 9px 16px; border: 1px solid rgba(255,255,255,0.12); border-radius: 999px; background: rgba(255,255,255,0.03); font-size: 13px; color: #d6d9dc">Expansão e escala</span>
+            <span style="padding: 9px 16px; border: 1px solid rgba(255,255,255,0.12); border-radius: 999px; background: rgba(255,255,255,0.03); font-size: 13px; color: #d6d9dc">Tecnologia de ponta a ponta</span>
+            <span style="padding: 9px 16px; border: 1px solid rgba(255,255,255,0.12); border-radius: 999px; background: rgba(255,255,255,0.03); font-size: 13px; color: #d6d9dc">Estratégia de conversão</span>
+            <span style="padding: 9px 16px; border: 1px solid rgba(255,255,255,0.12); border-radius: 999px; background: rgba(255,255,255,0.03); font-size: 13px; color: #d6d9dc">Comunicação direta</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="processo" style="position: relative; max-width: 1240px; margin: 0 auto; padding: 80px 24px; border-top: 1px solid rgba(255,255,255,0.05)">
+      <div data-reveal style="display: inline-flex; align-items: center; gap: 9px; padding: 7px 15px; border: 1px solid rgba(255,255,255,0.12); border-radius: 999px; background: rgba(255,255,255,0.04); font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase; color: #b9bec4; margin-bottom: 22px">
+        <span style="width: 5px; height: 5px; border-radius: 50%; background: #f2f3f5"></span>
+        O processo
+      </div>
+      <h2 data-reveal style="font-size: clamp(28px, 4.4vw, 48px); line-height: 1.05; max-width: 620px; margin-bottom: 16px">Do diagnóstico <span style="color: #6c7278">à página no ar.</span></h2>
+      <p data-reveal style="font-size: 16px; line-height: 1.6; color: #8b9096; max-width: 520px; margin-bottom: 48px">Quatro etapas, cada uma com uma entrega que você aprova antes da próxima.</p>
+
+      <ol data-steps style="list-style: none; margin: 0 0 56px; padding: 0; display: grid; gap: 16px; grid-template-columns: 1fr">
+        <li data-reveal style="border: 1px solid rgba(255,255,255,0.08); border-radius: 18px; padding: 26px 22px; background: linear-gradient(180deg, rgba(255,255,255,0.045), rgba(255,255,255,0.012)); transition: border-color 0.3s ease" style-hover="border-color:rgba(255,255,255,0.22)">
+          <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 26px">
+            <span style="display: grid; place-items: center; width: 32px; height: 32px; border-radius: 50%; border: 1px solid rgba(255,255,255,0.16); font-family: 'JetBrains Mono', monospace; font-size: 11px; color: #b9bec4">01</span>
+            <span style="flex: 1; height: 1px; background: linear-gradient(90deg, rgba(255,255,255,0.16), transparent)"></span>
+          </div>
+          <h3 style="font-size: 18px; margin-bottom: 10px">Diagnóstico</h3>
+          <p style="font-size: 14px; line-height: 1.6; color: #8b9096">Oferta, ticket, canais e o que já foi testado. Saio com clareza de onde a conversão se perde.</p>
+        </li>
+        <li data-reveal style="border: 1px solid rgba(255,255,255,0.08); border-radius: 18px; padding: 26px 22px; background: linear-gradient(180deg, rgba(255,255,255,0.045), rgba(255,255,255,0.012)); transition: border-color 0.3s ease" style-hover="border-color:rgba(255,255,255,0.22)">
+          <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 26px">
+            <span style="display: grid; place-items: center; width: 32px; height: 32px; border-radius: 50%; border: 1px solid rgba(255,255,255,0.16); font-family: 'JetBrains Mono', monospace; font-size: 11px; color: #b9bec4">02</span>
+            <span style="flex: 1; height: 1px; background: linear-gradient(90deg, rgba(255,255,255,0.16), transparent)"></span>
+          </div>
+          <h3 style="font-size: 18px; margin-bottom: 10px">Estratégia e UX</h3>
+          <p style="font-size: 14px; line-height: 1.6; color: #8b9096">Mensagem, ordem dos argumentos e arquitetura da página. Wireframe aprovado antes do pixel final.</p>
+        </li>
+        <li data-reveal style="border: 1px solid rgba(255,255,255,0.08); border-radius: 18px; padding: 26px 22px; background: linear-gradient(180deg, rgba(255,255,255,0.045), rgba(255,255,255,0.012)); transition: border-color 0.3s ease" style-hover="border-color:rgba(255,255,255,0.22)">
+          <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 26px">
+            <span style="display: grid; place-items: center; width: 32px; height: 32px; border-radius: 50%; border: 1px solid rgba(255,255,255,0.16); font-family: 'JetBrains Mono', monospace; font-size: 11px; color: #b9bec4">03</span>
+            <span style="flex: 1; height: 1px; background: linear-gradient(90deg, rgba(255,255,255,0.16), transparent)"></span>
+          </div>
+          <h3 style="font-size: 18px; margin-bottom: 10px">Desenvolvimento</h3>
+          <p style="font-size: 14px; line-height: 1.6; color: #8b9096">Interface finalizada, código leve, responsividade completa e rastreamento de cada etapa do funil.</p>
+        </li>
+        <li data-reveal style="border: 1px solid rgba(255,255,255,0.08); border-radius: 18px; padding: 26px 22px; background: linear-gradient(180deg, rgba(255,255,255,0.045), rgba(255,255,255,0.012)); transition: border-color 0.3s ease" style-hover="border-color:rgba(255,255,255,0.22)">
+          <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 26px">
+            <span style="display: grid; place-items: center; width: 32px; height: 32px; border-radius: 50%; border: 1px solid rgba(255,255,255,0.16); font-family: 'JetBrains Mono', monospace; font-size: 11px; color: #b9bec4">04</span>
+            <span style="flex: 1; height: 1px; background: linear-gradient(90deg, rgba(255,255,255,0.16), transparent)"></span>
+          </div>
+          <h3 style="font-size: 18px; margin-bottom: 10px">Otimização</h3>
+          <p style="font-size: 14px; line-height: 1.6; color: #8b9096">Leitura de dados, testes de headline e oferta. A página melhora enquanto a campanha roda.</p>
+        </li>
+      </ol>
+
+      <div data-metrics style="display: grid; gap: 28px; grid-template-columns: repeat(2, 1fr); padding-top: 48px; border-top: 1px solid rgba(255,255,255,0.06)">
+        <div data-reveal data-metric="conversao" style="text-align: center">
+          <p style="font-family: 'Space Grotesk', sans-serif; font-size: clamp(34px, 5vw, 54px); letter-spacing: -0.04em; line-height: 1">↑ 3,2×</p>
+          <p style="font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase; color: #6c7278; margin-top: 12px">Conversão</p>
+        </div>
+        <div data-reveal data-metric="cpl" style="text-align: center">
+          <p style="font-family: 'Space Grotesk', sans-serif; font-size: clamp(34px, 5vw, 54px); letter-spacing: -0.04em; line-height: 1">↓ 41%</p>
+          <p style="font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase; color: #6c7278; margin-top: 12px">Custo por lead</p>
+        </div>
+        <div data-reveal data-metric="prazo" style="text-align: center">
+          <p style="font-family: 'Space Grotesk', sans-serif; font-size: clamp(34px, 5vw, 54px); letter-spacing: -0.04em; line-height: 1">7–14</p>
+          <p style="font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase; color: #6c7278; margin-top: 12px">Dias de entrega</p>
+        </div>
+        <div data-reveal data-metric="resposta" style="text-align: center">
+          <p style="font-family: 'Space Grotesk', sans-serif; font-size: clamp(34px, 5vw, 54px); letter-spacing: -0.04em; line-height: 1">24h</p>
+          <p style="font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase; color: #6c7278; margin-top: 12px">Para retornar</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="projetos" style="max-width: 1240px; margin: 0 auto; padding: 80px 24px; border-top: 1px solid rgba(255,255,255,0.05)">
+      <div data-reveal style="display: inline-flex; align-items: center; gap: 9px; padding: 7px 15px; border: 1px solid rgba(255,255,255,0.12); border-radius: 999px; background: rgba(255,255,255,0.04); font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase; color: #b9bec4; margin-bottom: 22px">
+        <span style="width: 5px; height: 5px; border-radius: 50%; background: #f2f3f5"></span>
+        Projetos
+      </div>
+      <h2 data-reveal style="font-size: clamp(28px, 4.4vw, 48px); line-height: 1.05; max-width: 620px; margin-bottom: 48px">Produtos <span style="color: #6c7278">no ar.</span></h2>
+      <div data-portfolio style="display: grid; gap: 20px; grid-template-columns: 1fr">
+        <article data-reveal style="border: 1px solid rgba(255,255,255,0.08); border-radius: 18px; overflow: hidden; background: rgba(255,255,255,0.02); transition: transform 0.3s ease, border-color 0.3s ease" style-hover="transform:translateY(-4px); border-color:rgba(255,255,255,0.22)">
+          <div style="aspect-ratio: 16/10; overflow: hidden; border-bottom: 1px solid rgba(255,255,255,0.08); background: #0b0c0d">
+            <img src="assets/case-bmw.png" alt="BMW — interface do projeto" loading="lazy" decoding="async" style="width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.6s cubic-bezier(0.2,0.8,0.2,1)" style-hover="transform:scale(1.04)">
+          </div>
+          <div style="padding: 22px">
+            <p style="font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: #6c7278; margin-bottom: 12px">Automotivo · Área logada</p>
+            <h3 style="font-size: 19px; margin-bottom: 10px">BMW</h3>
+            <p style="font-size: 14px; line-height: 1.6; color: #8b9096; margin-bottom: 18px">Central do cliente com dashboard de pagamentos, test-drive e serviços da concessionária em um só painel.</p>
+            <a href="https://www.bmw.com.br/pt/index.html" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 8px; font-size: 14px; font-weight: 500">Ver Case <span aria-hidden="true">→</span></a>
+          </div>
+        </article>
+        <article data-reveal style="border: 1px solid rgba(255,255,255,0.08); border-radius: 18px; overflow: hidden; background: rgba(255,255,255,0.02); transition: transform 0.3s ease, border-color 0.3s ease" style-hover="transform:translateY(-4px); border-color:rgba(255,255,255,0.22)">
+          <div style="aspect-ratio: 16/10; overflow: hidden; border-bottom: 1px solid rgba(255,255,255,0.08); background: #0b0c0d">
+            <img src="assets/case-mestry.png" alt="Mestry — interface do projeto" loading="lazy" decoding="async" style="width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.6s cubic-bezier(0.2,0.8,0.2,1)" style-hover="transform:scale(1.04)">
+          </div>
+          <div style="padding: 22px">
+            <p style="font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: #6c7278; margin-bottom: 12px">SaaS · Analytics</p>
+            <h3 style="font-size: 19px; margin-bottom: 10px">Mestry</h3>
+            <p style="font-size: 14px; line-height: 1.6; color: #8b9096; margin-bottom: 18px">Plataforma de marketing direto que reúne faturamento, lucro, ROAS e CPA em uma leitura única da operação.</p>
+            <a href="https://mestry.com/" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 8px; font-size: 14px; font-weight: 500">Ver Case <span aria-hidden="true">→</span></a>
+          </div>
+        </article>
+        <article data-reveal style="border: 1px solid rgba(255,255,255,0.08); border-radius: 18px; overflow: hidden; background: rgba(255,255,255,0.02); transition: transform 0.3s ease, border-color 0.3s ease" style-hover="transform:translateY(-4px); border-color:rgba(255,255,255,0.22)">
+          <div style="aspect-ratio: 16/10; overflow: hidden; border-bottom: 1px solid rgba(255,255,255,0.08); background: #0b0c0d">
+            <img src="assets/case-tenho-beneficios.png" alt="Tenho Benefícios — interface do projeto" loading="lazy" decoding="async" style="width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.6s cubic-bezier(0.2,0.8,0.2,1)" style-hover="transform:scale(1.04)">
+          </div>
+          <div style="padding: 22px">
+            <p style="font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: #6c7278; margin-bottom: 12px">Benefícios · Landing page</p>
+            <h3 style="font-size: 19px; margin-bottom: 10px">Tenho Benefícios</h3>
+            <p style="font-size: 14px; line-height: 1.6; color: #8b9096; margin-bottom: 18px">Página de planos de telemedicina com prova social de influenciador e situações reais de uso antes do preço.</p>
+            <a href="https://tenhobeneficios.com.br/" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 8px; font-size: 14px; font-weight: 500">Ver Case <span aria-hidden="true">→</span></a>
+          </div>
+        </article>
+        <article data-reveal style="border: 1px solid rgba(255,255,255,0.08); border-radius: 18px; overflow: hidden; background: rgba(255,255,255,0.02); transition: transform 0.3s ease, border-color 0.3s ease" style-hover="transform:translateY(-4px); border-color:rgba(255,255,255,0.22)">
+          <div style="aspect-ratio: 16/10; overflow: hidden; border-bottom: 1px solid rgba(255,255,255,0.08); background: #0b0c0d">
+            <img src="assets/case-gostnest.png" alt="GotNest — interface do projeto" loading="lazy" decoding="async" style="width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.6s cubic-bezier(0.2,0.8,0.2,1)" style-hover="transform:scale(1.04)">
+          </div>
+          <div style="padding: 22px">
+            <p style="font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: #6c7278; margin-bottom: 12px">Real estate · Produto web</p>
+            <h3 style="font-size: 19px; margin-bottom: 10px">GotNest</h3>
+            <p style="font-size: 14px; line-height: 1.6; color: #8b9096; margin-bottom: 18px">Busca e comparação de imóveis com assistente de IA, estimativa de parcela e recomendação personalizada.</p>
+            <a href="https://home.gotnest.com/" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 8px; font-size: 14px; font-weight: 500">Ver Case <span aria-hidden="true">→</span></a>
+          </div>
+        </article>
+      </div>
+
+      <div data-quotes style="display: grid; gap: 16px; grid-template-columns: 1fr; margin-top: 20px">
+        <figure data-reveal style="margin: 0; display: grid; gap: 18px; align-content: start; padding: 26px 24px; border: 1px solid rgba(255,255,255,0.08); border-radius: 18px; background: rgba(255,255,255,0.02)">
+          <blockquote style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-size: 16px; line-height: 1.5; color: #e6e8ea">“Chegou fazendo as perguntas certas antes de desenhar qualquer tela. Em duas semanas a página estava no ar e o custo por lead caiu no primeiro mês.”</blockquote>
+          <figcaption style="font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: #6c7278">Gestor de tráfego · e-commerce de moda</figcaption>
+        </figure>
+        <figure data-reveal style="margin: 0; display: grid; gap: 18px; align-content: start; padding: 26px 24px; border: 1px solid rgba(255,255,255,0.08); border-radius: 18px; background: rgba(255,255,255,0.02)">
+          <blockquote style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-size: 16px; line-height: 1.5; color: #e6e8ea">“A qualificação no formulário mudou nossa rotina comercial. Paramos de perder tempo com reunião de quem não tinha orçamento.”</blockquote>
+          <figcaption style="font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: #6c7278">Sócio-fundador · clínica odontológica</figcaption>
+        </figure>
+        <figure data-reveal style="margin: 0; display: grid; gap: 18px; align-content: start; padding: 26px 24px; border: 1px solid rgba(255,255,255,0.08); border-radius: 18px; background: rgba(255,255,255,0.02)">
+          <blockquote style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-size: 16px; line-height: 1.5; color: #e6e8ea">“Comunicação direta, sem intermediário. Entregou no prazo combinado e seguiu acompanhando os números depois do lançamento.”</blockquote>
+          <figcaption style="font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: #6c7278">Head de marketing · SaaS B2B</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section id="diagnostico" style="max-width: 1240px; margin: 0 auto; padding: 80px 24px; border-top: 1px solid rgba(255,255,255,0.05)">
+      <div data-form-grid style="display: grid; gap: 40px; grid-template-columns: 1fr">
+        <div data-reveal>
+          <div style="display: inline-flex; align-items: center; gap: 9px; padding: 7px 15px; border: 1px solid rgba(255,255,255,0.12); border-radius: 999px; background: rgba(255,255,255,0.04); font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase; color: #b9bec4; margin-bottom: 22px">
+            <span style="width: 5px; height: 5px; border-radius: 50%; background: #f2f3f5"></span>
+            Diagnóstico
+          </div>
+          <h2 style="font-size: clamp(28px, 4.2vw, 46px); line-height: 1.05; margin-bottom: 18px">Antes de propor, <span style="color: #6c7278">eu entendo seu cenário.</span></h2>
+          <p style="font-size: 16px; line-height: 1.6; color: #8b9096; max-width: 420px">Responda o formulário. Se houver encaixe, retorno em até 24h com uma leitura inicial do seu funil e os próximos passos.</p>
+        </div>
+
+        <div data-reveal style="border: 1px solid rgba(255,255,255,0.08); border-radius: 20px; background: linear-gradient(180deg, rgba(255,255,255,0.05), rgba(255,255,255,0.012)); padding: 30px">
+          <sc-if value="{{ sent }}">
+            <div role="status" style="display: grid; gap: 16px; place-items: start; padding: 24px 0">
+              <span style="display: grid; place-items: center; width: 46px; height: 46px; border-radius: 50%; border: 1px solid rgba(255,255,255,0.2); background: rgba(255,255,255,0.06); font-size: 19px">✓</span>
+              <h3 style="font-size: 23px">Recebido.</h3>
+              <p style="font-size: 15px; line-height: 1.6; color: #8b9096">Suas respostas chegaram. Vou analisar seu cenário e retornar em até 24h com a leitura inicial do funil.</p>
+              <button type="button" onClick="{{ reset }}" style="margin-top: 8px; padding: 12px 22px; border-radius: 999px; border: 1px solid rgba(255,255,255,0.16); background: transparent; cursor: pointer; font-size: 14px; transition: background 0.2s ease" style-hover="background:rgba(255,255,255,0.06)">Enviar outra resposta</button>
+            </div>
+          </sc-if>
+          <sc-if value="{{ notSent }}" hint-placeholder-val="{{ true }}">
+            <form onSubmit="{{ submit }}" style="display: grid; gap: 16px">
+              <div data-field-row style="display: grid; gap: 16px; grid-template-columns: 1fr">
+                <label style="display: grid; gap: 8px; font-size: 13px; color: #9aa0a6">Nome
+                  <input name="nome" type="text" required autoComplete="name" style="padding: 13px 14px; border-radius: 10px; border: 1px solid rgba(255,255,255,0.12); background: rgba(255,255,255,0.03); font-size: 15px; transition: border-color 0.2s ease" style-focus="border-color:rgba(255,255,255,0.45); outline:none">
+                </label>
+                <label style="display: grid; gap: 8px; font-size: 13px; color: #9aa0a6">Empresa
+                  <input name="empresa" type="text" autoComplete="organization" style="padding: 13px 14px; border-radius: 10px; border: 1px solid rgba(255,255,255,0.12); background: rgba(255,255,255,0.03); font-size: 15px; transition: border-color 0.2s ease" style-focus="border-color:rgba(255,255,255,0.45); outline:none">
+                </label>
+              </div>
+              <div data-field-row style="display: grid; gap: 16px; grid-template-columns: 1fr">
+                <label style="display: grid; gap: 8px; font-size: 13px; color: #9aa0a6">Site
+                  <input name="site" type="url" placeholder="https://" style="padding: 13px 14px; border-radius: 10px; border: 1px solid rgba(255,255,255,0.12); background: rgba(255,255,255,0.03); font-size: 15px; transition: border-color 0.2s ease" style-focus="border-color:rgba(255,255,255,0.45); outline:none">
+                </label>
+                <label style="display: grid; gap: 8px; font-size: 13px; color: #9aa0a6">Instagram
+                  <input name="instagram" type="text" placeholder="@" style="padding: 13px 14px; border-radius: 10px; border: 1px solid rgba(255,255,255,0.12); background: rgba(255,255,255,0.03); font-size: 15px; transition: border-color 0.2s ease" style-focus="border-color:rgba(255,255,255,0.45); outline:none">
+                </label>
+              </div>
+              <div data-field-row style="display: grid; gap: 16px; grid-template-columns: 1fr">
+                <label style="display: grid; gap: 8px; font-size: 13px; color: #9aa0a6">Segmento
+                  <input name="segmento" type="text" style="padding: 13px 14px; border-radius: 10px; border: 1px solid rgba(255,255,255,0.12); background: rgba(255,255,255,0.03); font-size: 15px; transition: border-color 0.2s ease" style-focus="border-color:rgba(255,255,255,0.45); outline:none">
+                </label>
+                <label style="display: grid; gap: 8px; font-size: 13px; color: #9aa0a6">Já possui site?
+                  <select name="temSite" style="padding: 13px 14px; border-radius: 10px; border: 1px solid rgba(255,255,255,0.12); background: rgba(255,255,255,0.03); font-size: 15px" style-focus="border-color:rgba(255,255,255,0.45); outline:none">
+                    <option style="background:#0b0c0d">Selecione</option>
+                    <option style="background:#0b0c0d">Sim, está no ar</option>
+                    <option style="background:#0b0c0d">Sim, mas não converte</option>
+                    <option style="background:#0b0c0d">Não</option>
+                  </select>
+                </label>
+              </div>
+
+              <fieldset style="border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; padding: 16px; margin: 4px 0 0; display: grid; gap: 10px">
+                <legend style="padding: 0 6px; font-size: 13px; color: #9aa0a6">Quanto investe em tráfego por mês?</legend>
+                <label style="display: flex; align-items: center; gap: 10px; font-size: 15px; cursor: pointer"><input type="radio" name="investimento" value="Ainda não invisto" style="width: 16px; height: 16px"> Ainda não invisto</label>
+                <label style="display: flex; align-items: center; gap: 10px; font-size: 15px; cursor: pointer"><input type="radio" name="investimento" value="Até R$2.000" style="width: 16px; height: 16px"> Até R$2.000</label>
+                <label style="display: flex; align-items: center; gap: 10px; font-size: 15px; cursor: pointer"><input type="radio" name="investimento" value="R$2.000–10.000" style="width: 16px; height: 16px"> R$2.000–10.000</label>
+                <label style="display: flex; align-items: center; gap: 10px; font-size: 15px; cursor: pointer"><input type="radio" name="investimento" value="Acima de R$10.000" style="width: 16px; height: 16px"> Acima de R$10.000</label>
+              </fieldset>
+
+              <label style="display: grid; gap: 8px; font-size: 13px; color: #9aa0a6">Qual o principal desafio hoje?
+                <textarea name="desafio" rows="2" style="padding: 13px 14px; border-radius: 10px; border: 1px solid rgba(255,255,255,0.12); background: rgba(255,255,255,0.03); font-size: 15px; resize: vertical; font-family: inherit" style-focus="border-color:rgba(255,255,255,0.45); outline:none"></textarea>
+              </label>
+              <label style="display: grid; gap: 8px; font-size: 13px; color: #9aa0a6">Qual objetivo?
+                <textarea name="objetivo" rows="2" style="padding: 13px 14px; border-radius: 10px; border: 1px solid rgba(255,255,255,0.12); background: rgba(255,255,255,0.03); font-size: 15px; resize: vertical; font-family: inherit" style-focus="border-color:rgba(255,255,255,0.45); outline:none"></textarea>
+              </label>
+              <label style="display: grid; gap: 8px; font-size: 13px; color: #9aa0a6">Quanto pretende investir no projeto?
+                <input name="orcamento" type="text" style="padding: 13px 14px; border-radius: 10px; border: 1px solid rgba(255,255,255,0.12); background: rgba(255,255,255,0.03); font-size: 15px; transition: border-color 0.2s ease" style-focus="border-color:rgba(255,255,255,0.45); outline:none">
+              </label>
+
+              <button type="submit" style="margin-top: 8px; padding: 16px 24px; border-radius: 999px; border: none; background: #f2f3f5; color: #050506; font-weight: 500; font-size: 15px; cursor: pointer; transition: transform 0.2s ease, box-shadow 0.2s ease" style-hover="transform:translateY(-2px); box-shadow:0 14px 34px rgba(255,255,255,0.18)">Quero receber um diagnóstico</button>
+            </form>
+          </sc-if>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq" style="max-width: 860px; margin: 0 auto; padding: 80px 24px; border-top: 1px solid rgba(255,255,255,0.05)">
+      <h2 data-reveal style="font-size: clamp(26px, 4vw, 42px); line-height: 1.05; margin-bottom: 40px; text-align: center">Perguntas frequentes.</h2>
+      <div style="display: grid">
+        <div data-faq style="border-top: 1px solid rgba(255,255,255,0.08)">
+          <button data-faq-trigger type="button" aria-expanded="false" style="width: 100%; display: flex; justify-content: space-between; align-items: center; gap: 20px; padding: 22px 0; background: none; border: none; text-align: left; cursor: pointer; font-family: 'Space Grotesk', sans-serif; font-size: 17px; color: #f2f3f5">
+            Qual é o prazo de entrega?
+            <span data-faq-icon style="font-family: 'JetBrains Mono', monospace; color: #8b9096; transition: transform 0.25s ease; flex: none">+</span>
+          </button>
+          <div data-faq-panel style="display: none; padding: 0 0 24px"><p style="font-size: 15px; line-height: 1.65; color: #8b9096">De 7 a 14 dias úteis, com wireframe aprovado por você no meio do caminho. O que atrasa projeto não é design: é conteúdo, acesso a domínio e aprovação.</p></div>
+        </div>
+        <div data-faq style="border-top: 1px solid rgba(255,255,255,0.08)">
+          <button data-faq-trigger type="button" aria-expanded="false" style="width: 100%; display: flex; justify-content: space-between; align-items: center; gap: 20px; padding: 22px 0; background: none; border: none; text-align: left; cursor: pointer; font-family: 'Space Grotesk', sans-serif; font-size: 17px; color: #f2f3f5">
+            Como funcionam os valores?
+            <span data-faq-icon style="font-family: 'JetBrains Mono', monospace; color: #8b9096; transition: transform 0.25s ease; flex: none">+</span>
+          </button>
+          <div data-faq-panel style="display: none; padding: 0 0 24px"><p style="font-size: 15px; line-height: 1.65; color: #8b9096">Valor fechado por projeto, definido depois do diagnóstico, sem cobrança por hora. O escopo é escrito antes de começar: o que entra, o que não entra e quantas rodadas de revisão.</p></div>
+        </div>
+        <div data-faq style="border-top: 1px solid rgba(255,255,255,0.08)">
+          <button data-faq-trigger type="button" aria-expanded="false" style="width: 100%; display: flex; justify-content: space-between; align-items: center; gap: 20px; padding: 22px 0; background: none; border: none; text-align: left; cursor: pointer; font-family: 'Space Grotesk', sans-serif; font-size: 17px; color: #f2f3f5">
+            Você também gerencia o tráfego pago?
+            <span data-faq-icon style="font-family: 'JetBrains Mono', monospace; color: #8b9096; transition: transform 0.25s ease; flex: none">+</span>
+          </button>
+          <div data-faq-panel style="display: none; padding: 0 0 24px"><p style="font-size: 15px; line-height: 1.65; color: #8b9096">Não gerencio mídia. Cuido do que acontece depois do clique: página, rastreamento, eventos de conversão e leitura dos dados, junto do seu gestor de tráfego.</p></div>
+        </div>
+        <div data-faq style="border-top: 1px solid rgba(255,255,255,0.08)">
+          <button data-faq-trigger type="button" aria-expanded="false" style="width: 100%; display: flex; justify-content: space-between; align-items: center; gap: 20px; padding: 22px 0; background: none; border: none; text-align: left; cursor: pointer; font-family: 'Space Grotesk', sans-serif; font-size: 17px; color: #f2f3f5">
+            Onde a IA entra no projeto?
+            <span data-faq-icon style="font-family: 'JetBrains Mono', monospace; color: #8b9096; transition: transform 0.25s ease; flex: none">+</span>
+          </button>
+          <div data-faq-panel style="display: none; padding: 0 0 24px"><p style="font-size: 15px; line-height: 1.65; color: #8b9096">Em pesquisa de concorrência, variações de copy para teste, análise das respostas do formulário e triagem dos leads. A estratégia e a decisão final continuam minhas.</p></div>
+        </div>
+        <div data-faq style="border-top: 1px solid rgba(255,255,255,0.08); border-bottom: 1px solid rgba(255,255,255,0.08)">
+          <button data-faq-trigger type="button" aria-expanded="false" style="width: 100%; display: flex; justify-content: space-between; align-items: center; gap: 20px; padding: 22px 0; background: none; border: none; text-align: left; cursor: pointer; font-family: 'Space Grotesk', sans-serif; font-size: 17px; color: #f2f3f5">
+            E se a página não performar como esperado?
+            <span data-faq-icon style="font-family: 'JetBrains Mono', monospace; color: #8b9096; transition: transform 0.25s ease; flex: none">+</span>
+          </button>
+          <div data-faq-panel style="display: none; padding: 0 0 24px"><p style="font-size: 15px; line-height: 1.65; color: #8b9096">Entramos em ciclo de teste. Com rastreamento configurado dá para ver onde o visitante para: headline, oferta, prova ou formulário. Ajusto o ponto de queda em vez de refazer tudo.</p></div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer style="border-top: 1px solid rgba(255,255,255,0.05)">
+    <div style="max-width: 1240px; margin: 0 auto; padding: 40px 24px; display: flex; flex-wrap: wrap; gap: 24px; align-items: center; justify-content: space-between">
+      <div style="display: flex; align-items: center; gap: 10px; font-family: 'Space Grotesk', sans-serif; font-weight: 700; letter-spacing: -0.03em">
+        <img src="assets/hofflab-mark.png" alt="HoffLab" width="24" height="24" loading="lazy" decoding="async" style="width: 24px; height: 24px; object-fit: contain; display: block">
+        <span>Hoff<span style="color: #8b9096">Lab</span></span>
+      </div>
+      <nav style="display: flex; flex-wrap: wrap; gap: 24px; font-size: 14px; color: #8b9096">
+        <a href="#" style="color: #8b9096" style-hover="color:#fff">Instagram</a>
+        <a href="#" style="color: #8b9096" style-hover="color:#fff">LinkedIn</a>
+        <a href="#" style="color: #8b9096" style-hover="color:#fff">WhatsApp</a>
+        <a href="#" style="color: #8b9096" style-hover="color:#fff">E-mail</a>
+      </nav>
+      <p style="font-family: 'JetBrains Mono', monospace; font-size: 11px; color: #4f5459">© 2026</p>
+    </div>
+  </footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{}">
+class Component extends DCLogic {
+  state = { sent: false };
+
+  renderVals() {
+    return {
+      sent: this.state.sent,
+      notSent: !this.state.sent,
+      submit: (e) => { e.preventDefault(); this.setState({ sent: true }); },
+      reset: () => this.setState({ sent: false }),
+    };
+  }
+
+  componentDidMount() {
+    this.applyResponsive();
+    this.wireFaq();
+    this.wireReveal();
+    this._onResize = () => this.applyResponsive();
+    window.addEventListener('resize', this._onResize);
+  }
+
+  componentDidUpdate() { this.applyResponsive(); this.wireFaq(); }
+
+  componentWillUnmount() {
+    window.removeEventListener('resize', this._onResize);
+    if (this._io) this._io.disconnect();
+  }
+
+  root() { return this._rootEl || (this._rootEl = document.querySelector('x-dc') || document.body); }
+
+  applyResponsive() {
+    const r = this.root(), w = window.innerWidth;
+    const set = (sel, prop, val) => r.querySelectorAll(sel).forEach(el => { el.style[prop] = val; });
+    const md = w >= 760, lg = w >= 1000;
+    set('[data-nav-links]', 'display', lg ? 'flex' : 'none');
+    r.querySelectorAll('[data-cta-nav]').forEach(el => { el.style.marginLeft = lg ? '0' : 'auto'; });
+    set('[data-about]', 'gridTemplateColumns', md ? '0.85fr 1.15fr' : '1fr');
+    set('[data-steps]', 'gridTemplateColumns', lg ? 'repeat(4, 1fr)' : md ? 'repeat(2, 1fr)' : '1fr');
+    set('[data-metrics]', 'gridTemplateColumns', md ? 'repeat(4, 1fr)' : 'repeat(2, 1fr)');
+    set('[data-portfolio]', 'gridTemplateColumns', md ? 'repeat(2, 1fr)' : '1fr');
+    set('[data-quotes]', 'gridTemplateColumns', lg ? 'repeat(3, 1fr)' : '1fr');
+    set('[data-form-grid]', 'gridTemplateColumns', lg ? '0.85fr 1.15fr' : '1fr');
+    set('[data-form-grid]', 'alignItems', lg ? 'start' : 'stretch');
+    set('[data-field-row]', 'gridTemplateColumns', md ? '1fr 1fr' : '1fr');
+  }
+
+  wireFaq() {
+    this.root().querySelectorAll('[data-faq]').forEach(item => {
+      const btn = item.querySelector('[data-faq-trigger]');
+      const panel = item.querySelector('[data-faq-panel]');
+      const icon = item.querySelector('[data-faq-icon]');
+      if (!btn || !panel) return;
+      const open = btn.getAttribute('aria-expanded') === 'true';
+      panel.style.display = open ? 'block' : 'none';
+      if (icon) icon.style.transform = open ? 'rotate(45deg)' : 'rotate(0deg)';
+      if (btn.dataset.wired) return;
+      btn.dataset.wired = '1';
+      btn.addEventListener('click', () => {
+        const wasOpen = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!wasOpen));
+        panel.style.display = wasOpen ? 'none' : 'block';
+        if (icon) icon.style.transform = wasOpen ? 'rotate(0deg)' : 'rotate(45deg)';
+      });
+    });
+  }
+
+  wireReveal() {
+    const els = Array.from(this.root().querySelectorAll('[data-reveal]'));
+    if (!els.length) return;
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches || !('IntersectionObserver' in window)) return;
+    els.forEach((el, i) => {
+      const d = Math.min(i % 4, 3) * 0.06;
+      el.style.opacity = '0';
+      el.style.transform = 'translateY(14px)';
+      el.style.transition = 'opacity 0.7s cubic-bezier(0.2,0.8,0.2,1) ' + d + 's, transform 0.7s cubic-bezier(0.2,0.8,0.2,1) ' + d + 's';
+    });
+    this._io = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.style.opacity = '1';
+          e.target.style.transform = 'none';
+          this._io.unobserve(e.target);
+        }
+      });
+    }, { rootMargin: '0px 0px -6% 0px', threshold: 0.06 });
+    els.forEach(el => this._io.observe(el));
+  }
+}
+</script>
+</body>
+</html>
